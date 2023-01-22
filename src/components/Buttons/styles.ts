@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const StyledButtons = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    margin: 0 120px;
+    gap: 20px;
+
+    margin: 0 60px;
 `;

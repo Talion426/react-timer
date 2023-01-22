@@ -21,4 +21,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    display: flex;
+    
+    width: 100vw;
+    height: 100vh;
+`;

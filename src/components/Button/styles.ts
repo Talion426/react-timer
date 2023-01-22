@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { Color, Typography } from "ui";
 
 export const StyledButton = styled.button`
-    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
 
     ${Typography.Button}
 
