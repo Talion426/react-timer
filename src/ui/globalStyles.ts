@@ -1,19 +1,24 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { ResetCSS } from "./resetCSS";
-import { Theme } from "./theme";
+import { Color } from "ui";
+import { ResetCSS } from "ui";
+import { Dark, Light } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
     ${ResetCSS}
 
     html[theme="dark"]{
-      ${Theme.Dark}
+      ${Dark}
     }
 
     html[theme="light"]{
-      ${Theme.Light}
+      ${Light}
     }
 
-    body {}
+    body {
+      font-family: "Comfortaa";
+      background: ${Color.Primary};
+      overflow: hidden;
+    }
 `;
 
 export const Wrapper = styled.div``;
