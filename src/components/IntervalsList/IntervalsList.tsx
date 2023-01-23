@@ -11,10 +11,12 @@ export const IntervalsList = () => {
             </IntervalsNav>
             <IntervalsBody>
                 <IntervalsItem interval="01" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
-                <IntervalsItem interval="01" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
-                <IntervalsItem interval="01" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
-                <IntervalsItem interval="01" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
-                <IntervalsItem interval="01" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="02" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="03" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="04" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="05" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="05" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
+                <IntervalsItem interval="05" intervalTime="00:00:00:00" fullTime="00:00:00:00" />
             </IntervalsBody>
         </StyledIntervalsList>
     );

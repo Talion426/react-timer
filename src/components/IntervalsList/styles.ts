@@ -25,7 +25,10 @@ export const IntervalsNav = styled.div`
     border-bottom: 1px solid ${Color.Tertiary};
 `;
 
-export const IntervalsBody = styled.div``;
+export const IntervalsBody = styled.div`
+    max-height: 300px;
+    overflow: auto;
+`;
 
 export const NavItem = styled.p`
     font-size: 14px;
