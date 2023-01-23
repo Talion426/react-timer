@@ -1,9 +1,12 @@
 import { IntervalsList, Timer } from "components";
 import { useState } from "react";
+import { useAppDispatch, addInterval, deleteIntervals } from "store";
 import { Wrapper } from "ui";
 import { ThemeToggler } from "./components";
 
 export const App = () => {
+    const dispatch = useAppDispatch();
+
     let hour = 0;
     let minute = 0;
     let second = 0;
@@ -15,13 +18,9 @@ export const App = () => {
     const [hoursElement, setHoursElement] = useState<string>("00");
     const [intervalElement, setIntervalElement] = useState<any>();
 
-    let millisecondsInterval = millisecondsElement;
-    let secondsInterval = secondsElement;
-    let minutesInterval = minutesElement;
-    let hoursInterval = hoursElement;
-
     const handleStartTimer = () => {
         clearInterval(intervalElement);
+        dispatch(deleteIntervals());
         setIntervalElement(setInterval(startTimer, 10));
     };
 
@@ -30,11 +29,18 @@ export const App = () => {
     };
 
     const handleIntervalTimer = () => {
-        console.log(`${hoursInterval}:${minutesInterval}:${secondsInterval}:${millisecondsInterval}`);
+        const intervalTime = `${hoursElement}:${minutesElement}:${secondsElement}:${millisecondsElement}`;
+
+        dispatch(
+            addInterval({
+                intervalTime,
+            })
+        );
     };
 
     const handleResetTimer = () => {
         clearInterval(intervalElement);
+        dispatch(deleteIntervals());
 
         hour = 0;
         minute = 0;
