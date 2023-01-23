@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "ui";
+import { Color, Media } from "ui";
 
 export const StyledIntervalsItem = styled.div`
     display: grid;
@@ -11,6 +11,12 @@ export const StyledIntervalsItem = styled.div`
     text-align: center;
 
     border-bottom: 1px solid ${Color.Tertiary};
+
+    ${Media.SM} {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 15px 0;
+    }
 `;
 
 export const Text = styled.p`

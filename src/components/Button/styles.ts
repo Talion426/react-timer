@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color, Typography } from "ui";
+import { Color, Media, Typography } from "ui";
 
 export const StyledButton = styled.button`
     display: flex;
@@ -13,4 +13,8 @@ export const StyledButton = styled.button`
     background: ${Color.Quinary};
     border: 3px solid ${Color.Secondary};
     border-radius: 10px;
+
+    ${Media.SM} {
+        border: 2px solid ${Color.Secondary};
+    }
 `;

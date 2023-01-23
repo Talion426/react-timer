@@ -21,7 +21,7 @@ export const IntervalsList = () => {
                         intervalIndex = `0${++index}`;
                     }
 
-                    return <IntervalsItem interval={intervalIndex} intervalTime={interval.intervalTime} />;
+                    return <IntervalsItem key={index} interval={intervalIndex} intervalTime={interval.intervalTime} />;
                 })}
             </IntervalsBody>
         </StyledIntervalsList>

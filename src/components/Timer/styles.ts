@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "ui";
+import { Color, Media } from "ui";
 
 export const StyledTimer = styled.section`
     position: relative;
@@ -14,6 +14,21 @@ export const StyledTimer = styled.section`
 
     border: 5px solid ${Color.Quaternary};
     border-radius: 20px;
+
+    ${Media.LG} {
+        width: 720px;
+        padding: 80px 40px;
+
+        border: 4px solid ${Color.Quaternary};
+    }
+    ${Media.MD} {
+        width: 530px;
+        padding: 100px 40px 20px;
+    }
+    ${Media.SM} {
+        width: 100%;
+        margin: 0px;
+    }
 `;
 
 export const Navigation = styled.div`
@@ -27,6 +42,10 @@ export const Navigation = styled.div`
     border: 2px solid ${Color.Quaternary};
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    ${Media.SM} {
+        gap: 10px;
+    }
 `;
 
 export const NavItem = styled.button<{ active: boolean }>`
@@ -36,4 +55,9 @@ export const NavItem = styled.button<{ active: boolean }>`
     color: ${({ active }) => (active ? `${Color.Tertiary}` : `${Color.Quinary}`)};
 
     background: none;
+
+    ${Media.SM} {
+        font-size: 16px;
+        padding: 7px;
+    }
 `;

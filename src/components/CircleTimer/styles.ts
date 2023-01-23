@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "ui";
+import { Color, Media } from "ui";
 
 export const StyledCircleTimer = styled.div`
     position: relative;
@@ -30,6 +30,12 @@ export const StyledCircleTimer = styled.div`
         background: ${Color.Tertiary};
         border-radius: 50%;
     }
+
+    ${Media.MD} {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 46px;
+    }
 `;
 
 export const Hour = styled.div`
@@ -37,6 +43,11 @@ export const Hour = styled.div`
 
     width: 160px;
     height: 160px;
+
+    ${Media.MD} {
+        width: 130px;
+        height: 130px;
+    }
 `;
 
 export const Minute = styled.div`
@@ -44,6 +55,11 @@ export const Minute = styled.div`
 
     width: 190px;
     height: 190px;
+
+    ${Media.MD} {
+        width: 160px;
+        height: 160px;
+    }
 `;
 
 export const Second = styled.div`
@@ -51,6 +67,11 @@ export const Second = styled.div`
 
     width: 230px;
     height: 230px;
+
+    ${Media.MD} {
+        width: 200px;
+        height: 200px;
+    }
 `;
 
 export const HourArrow = styled.div<{ deg: string }>`
@@ -80,6 +101,17 @@ export const HourArrow = styled.div<{ deg: string }>`
 
         transform-origin: 50% 100%;
         transform: ${({ deg }) => `rotate(${+deg * 6}deg)` || `rotate(0)`};
+
+        ${Media.MD} {
+            top: calc(50% - 50px);
+
+            height: 50px;
+        }
+    }
+
+    ${Media.MD} {
+        width: 130px;
+        height: 130px;
     }
 `;
 
@@ -110,6 +142,17 @@ export const MinuteArrow = styled.div<{ deg: string }>`
 
         transform-origin: 50% 100%;
         transform: ${({ deg }) => `rotate(${+deg * 6}deg)` || `rotate(0)`};
+
+        ${Media.MD} {
+            top: calc(50% - 80px);
+
+            height: 80px;
+        }
+    }
+
+    ${Media.MD} {
+        width: 160px;
+        height: 160px;
     }
 `;
 
@@ -140,6 +183,16 @@ export const SecondArrow = styled.div<{ deg: string }>`
 
         transform-origin: 50% 80%;
         transform: ${({ deg }) => `rotate(${+deg * 6}deg)` || `rotate(0)`};
+
+        ${Media.MD} {
+            top: calc(50% - 96px);
+            height: 120px;
+        }
+    }
+
+    ${Media.MD} {
+        width: 200px;
+        height: 200px;
     }
 `;
 

@@ -1,4 +1,4 @@
-import { Buttons, CircleTimer, IntervalsList, TimerList } from "components";
+import { Buttons, CircleTimer, IntervalsList, ThemeToggler, TimerList } from "components";
 import { useState } from "react";
 import { Navigation, NavItem, StyledTimer } from "./styles";
 
@@ -55,6 +55,7 @@ export const Timer = ({
                 intervalTimer={intervalTimer}
                 resetTimer={resetTimer}
             />
+            <ThemeToggler type="checkbox" />
         </StyledTimer>
     );
 };

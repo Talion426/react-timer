@@ -2,7 +2,6 @@ import { Timer } from "components";
 import { useState } from "react";
 import { useAppDispatch, addInterval, deleteIntervals } from "store";
 import { Wrapper } from "ui";
-import { ThemeToggler } from "./components";
 
 export const App = () => {
     const dispatch = useAppDispatch();
@@ -107,7 +106,6 @@ export const App = () => {
                 intervalTimer={handleIntervalTimer}
                 resetTimer={handleResetTimer}
             />
-            <ThemeToggler type="checkbox" />
         </Wrapper>
     );
 };

@@ -1,14 +1,20 @@
 import styled from "styled-components";
-import { Color } from "ui";
+import { Color, Media } from "ui";
 
 export const StyledIntervalsList = styled.div`
     flex: 1 0 auto;
 
+    max-height: 260px;
     padding: 20px;
     margin-bottom: 40px;
+    overflow: hidden;
 
     border: 2px solid ${Color.Tertiary};
     border-radius: 20px;
+
+    ${Media.SM} {
+        max-height: 200px;
+    }
 `;
 
 export const IntervalsNav = styled.div`
@@ -21,10 +27,14 @@ export const IntervalsNav = styled.div`
     text-align: center;
 
     border-bottom: 1px solid ${Color.Tertiary};
+
+    ${Media.SM} {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 export const IntervalsBody = styled.div`
-    max-height: 190px;
+    max-height: 100%;
     overflow: auto;
 `;
 
