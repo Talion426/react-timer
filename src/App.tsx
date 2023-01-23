@@ -1,4 +1,4 @@
-import { Timer } from "components";
+import { IntervalsList, Timer } from "components";
 import { useState } from "react";
 import { Wrapper } from "ui";
 import { ThemeToggler } from "./components";
@@ -102,6 +102,7 @@ export const App = () => {
                 resetTimer={handleResetTimer}
             />
             <ThemeToggler type="checkbox" />
+            <IntervalsList />
         </Wrapper>
     );
 };
