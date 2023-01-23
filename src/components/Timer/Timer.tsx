@@ -1,5 +1,6 @@
-import { Buttons, TimerList } from "components";
-import { StyledTimer } from "./styles";
+import { Buttons, CircleTimer, IntervalsList, TimerList } from "components";
+import { useState } from "react";
+import { Navigation, NavItem, StyledTimer } from "./styles";
 
 interface IProps {
     hours: string;
@@ -22,9 +23,32 @@ export const Timer = ({
     intervalTimer,
     resetTimer,
 }: IProps) => {
+    const [isCircle, setCircle] = useState(false);
+
+    const handleCircle = () => {
+        setCircle(true);
+    };
+
+    const handleList = () => {
+        setCircle(false);
+    };
+
     return (
         <StyledTimer>
-            <TimerList hours={hours} minutes={minutes} seconds={seconds} milliseconds={milliseconds} />
+            <Navigation>
+                <NavItem onClick={handleCircle} active={isCircle}>
+                    Circle Timer
+                </NavItem>
+                <NavItem onClick={handleList} active={!isCircle}>
+                    Timer List
+                </NavItem>
+            </Navigation>
+            {isCircle ? (
+                <CircleTimer hours={hours} minutes={minutes} seconds={seconds} />
+            ) : (
+                <TimerList hours={hours} minutes={minutes} seconds={seconds} milliseconds={milliseconds} />
+            )}
+            <IntervalsList />
             <Buttons
                 startTimer={startTimer}
                 pauseTimer={pauseTimer}

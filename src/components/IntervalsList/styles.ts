@@ -2,15 +2,13 @@ import styled from "styled-components";
 import { Color } from "ui";
 
 export const StyledIntervalsList = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    flex: 1 0 auto;
 
     padding: 20px;
+    margin-bottom: 40px;
 
-    border-top: 2px solid ${Color.Tertiary};
-    border-right: 2px solid ${Color.Tertiary};
-    border-top-right-radius: 20px;
+    border: 2px solid ${Color.Tertiary};
+    border-radius: 20px;
 `;
 
 export const IntervalsNav = styled.div`
@@ -26,7 +24,7 @@ export const IntervalsNav = styled.div`
 `;
 
 export const IntervalsBody = styled.div`
-    max-height: 300px;
+    max-height: 190px;
     overflow: auto;
 `;
 

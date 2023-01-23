@@ -6,5 +6,6 @@ import { TimerList } from "./TimerList/TimerList";
 import { Timer } from "./Timer/Timer";
 import { IntervalsItem } from "./IntervalsItem/IntervalsItem";
 import { IntervalsList } from "./IntervalsList/IntervalsList";
+import { CircleTimer } from "./CircleTimer/CircleTimer";
 
-export { ThemeToggler, Button, Buttons, TimerItem, TimerList, Timer, IntervalsItem, IntervalsList };
+export { ThemeToggler, Button, Buttons, TimerItem, TimerList, Timer, IntervalsItem, IntervalsList, CircleTimer };
