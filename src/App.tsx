@@ -6,6 +6,8 @@ import { Wrapper } from "ui";
 export const App = () => {
     const dispatch = useAppDispatch();
 
+    const [isPaused, setPasued] = useState<boolean>();
+
     let hour = 0;
     let minute = 0;
     let second = 0;
@@ -19,7 +21,6 @@ export const App = () => {
 
     const handleStartTimer = () => {
         clearInterval(intervalElement);
-        dispatch(deleteIntervals());
         setIntervalElement(setInterval(startTimer, 10));
     };
 

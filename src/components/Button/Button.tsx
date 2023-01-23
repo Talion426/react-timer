@@ -1,3 +1,4 @@
+import { Color } from "ui";
 import { StyledButton } from "./styles";
 
 interface IProps {

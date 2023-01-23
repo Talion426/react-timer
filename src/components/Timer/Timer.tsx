@@ -34,7 +34,7 @@ export const Timer = ({
     };
 
     return (
-        <StyledTimer>
+        <StyledTimer initial={{ opacity: 0, x: -200 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.5 }}>
             <Navigation>
                 <NavItem onClick={handleCircle} active={isCircle}>
                     Circle Timer

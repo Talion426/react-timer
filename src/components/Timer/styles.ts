@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Color, Media } from "ui";
 
-export const StyledTimer = styled.section`
+export const StyledTimer = styled(motion.section)`
     position: relative;
 
     display: flex;
@@ -56,8 +57,17 @@ export const NavItem = styled.button<{ active: boolean }>`
 
     background: none;
 
+    transition: all 0.2s ease-in-out;
+
     ${Media.SM} {
         font-size: 16px;
         padding: 7px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        transform: scale(95%);
     }
 `;
