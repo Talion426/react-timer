@@ -1,13 +1,20 @@
 import { Button } from "components";
 import { StyledButtons } from "./styles";
 
-export const Buttons = () => {
+interface IProps {
+    startTimer: () => void;
+    pauseTimer: () => void;
+    intervalTimer: () => void;
+    resetTimer: () => void;
+}
+
+export const Buttons = ({ startTimer, pauseTimer, intervalTimer, resetTimer }: IProps) => {
     return (
         <StyledButtons>
-            <Button>Start</Button>
-            <Button>Pause</Button>
-            <Button>Interval</Button>
-            <Button>Reset</Button>
+            <Button onClick={startTimer}>Start</Button>
+            <Button onClick={pauseTimer}>Pause</Button>
+            <Button onClick={intervalTimer}>Interval</Button>
+            <Button onClick={resetTimer}>Reset</Button>
         </StyledButtons>
     );
 };
